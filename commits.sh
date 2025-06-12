@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Rango de fechas (del 19 de marzo de 2025 al 7 de mayo de 2025)
-start_date="2025-03-1"
-end_date="2025-05-07"
+start_date="2025-05-8"
+end_date="2025-06-12"
 
 # Obtener los timestamps de las fechas de inicio y fin
 start_timestamp=$(date -d "$start_date" +%s)
@@ -15,7 +15,7 @@ while [ $current_timestamp -le $end_timestamp ]; do
   current_date=$(date -d "@$current_timestamp" "+%Y-%m-%d")
   
   # Hacer commits en cada minuto del día (puedes ajustar el número de commits por día)
-  for i in {1..15}  # Cambia este número para hacer más o menos commits por día
+  for i in {1..10}  # Cambia este número para hacer más o menos commits por día
   do
     # Ajuste para que los minutos tengan dos dígitos correctamente
     if [ $i -lt 10 ]; then
